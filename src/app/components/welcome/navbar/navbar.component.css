@@ -1,0 +1,21 @@
+.nav-text{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+.material-icons{
+    color: #FFFFFF;
+}
+.nav-button{
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 1.5px;
+    padding: .15rem 1.75rem;
+    margin: 0 .75rem
+}
+.nav-button-more-info{
+    color: #113CFC;
+}
+.nav-button-login{
+    background-color: #94B3FD;
+    color: #FFF;
+}
