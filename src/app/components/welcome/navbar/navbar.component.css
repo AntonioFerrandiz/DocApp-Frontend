@@ -2,6 +2,18 @@
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
     color: #FFFFFF;
+    text-decoration: none;
+}
+.nav-text:hover{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.nav-text:focus{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.nav-text:visited{
+    text-decoration: none;
 }
 .material-icons{
     color: #FFFFFF;
