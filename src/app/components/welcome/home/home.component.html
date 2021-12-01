@@ -24,14 +24,16 @@
         <p> At, quasi ipsa sunt quam dolor dicta expedita suscipit inventore totam voluptatem voluptate saepe unde ullam
             consectetur accusantium tenetur temporibus sed necessitatibus!</p>
     </div>
+
+
     <div class="row justify-content-md-center">
-        <div class="col-sm-5">
+        <div class="col-sm-5 ">
             <mat-card class="about-card">
                 <mat-card-title class="about-card-title"> {{ cardTitle }} </mat-card-title>
                 <mat-card-content class="about-card-description"> {{ cardDescription }} </mat-card-content>
             </mat-card>
         </div>
-        <div class="col-auto ">
+        <div class="col-sm-5 ">
             <mat-card class="about-card">
                 <mat-card-title class="about-card-title"> {{ cardTitle }} </mat-card-title>
                 <mat-card-content class="about-card-description"> {{ cardDescription }} </mat-card-content>
@@ -39,13 +41,13 @@
         </div>
     </div>
     <div class="row justify-content-md-center">
-        <div class="col-sm-5">
+        <div class="col-sm-5 ">
             <mat-card class="about-card">
                 <mat-card-title class="about-card-title"> {{ cardTitle }} </mat-card-title>
                 <mat-card-content class="about-card-description"> {{ cardDescription }} </mat-card-content>
             </mat-card>
         </div>
-        <div class="col-auto ">
+        <div class="col-sm-5 ">
             <mat-card class="about-card">
                 <mat-card-title class="about-card-title"> {{ cardTitle }} </mat-card-title>
                 <mat-card-content class="about-card-description"> {{ cardDescription }} </mat-card-content>
@@ -53,13 +55,13 @@
         </div>
     </div>
     <div class="row justify-content-md-center">
-        <div class="col-sm-5">
+        <div class="col-sm-5 ">
             <mat-card class="about-card">
                 <mat-card-title class="about-card-title"> {{ cardTitle }} </mat-card-title>
                 <mat-card-content class="about-card-description"> {{ cardDescription }} </mat-card-content>
             </mat-card>
         </div>
-        <div class="col-auto ">
+        <div class="col-sm-5 ">
             <mat-card class="about-card">
                 <mat-card-title class="about-card-title"> {{ cardTitle }} </mat-card-title>
                 <mat-card-content class="about-card-description"> {{ cardDescription }} </mat-card-content>
@@ -67,18 +69,111 @@
         </div>
     </div>
 </div>
-
-<div class="container-footer">
+<div class="container-about">
     <div class="container">
+        <div class="row featurette justify-content-md-center mmm">
+            <div class="col-sm-5">
+                <h2 class="featurette-heading mmm-title">{{ cardTitle }} </h2>
+                <p class="mmm-text">{{ cardDescription }}</p>
+            </div>
+            <div class="col-md-5">
+                <img src="https://i.imgur.com/L5kKWIG.png"
+                    class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            </div>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div class="row featurette justify-content-md-center mmm">
+            <div class="col-sm-5 order-md-2">
+                <h2 class="featurette-heading mmm-title">{{ cardTitle }} </h2>
+                <p class="mmm-text">{{ cardDescription }}</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="https://i.imgur.com/L5kKWIG.png"
+                    class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            </div>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div class="row featurette justify-content-md-center mmm">
+            <div class="col-sm-5">
+                <h2 class="featurette-heading mmm-title">{{ cardTitle }} </h2>
+                <p class="mmm-text">{{ cardDescription }}</p>
+            </div>
+            <div class="col-md-5">
+                <img src="https://i.imgur.com/L5kKWIG.png"
+                    class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            </div>
+        </div>
+        <!-- <div class="row featurette justify-content-md-center ">
+            <div class="mmm">
+                <div class="col-sm-5">
+                    <h3 class="mmm-title">Lorem ipsum dolor.</h3>
+                    <p class="mmm-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatem
+                        harum iusto! Earum beatae fugit laborum, ab, harum adipisci eos soluta molestiae, ea sed
+                        inventore voluptas ducimus minus impedit reiciendis.</p>
+                </div>
+                <div class="col-sm-5">
+                    <img src="https://i.imgur.com/L5kKWIG.png" class="featurette-image img-fluid mx-auto" alt=""
+                        style="width: 100%;">
+                </div>
+            </div>
+        </div>
+
+        <div class="row featurette justify-content-md-center ">
+            <div class="mmm">
+                <div class="col-sm-5">
+                    <img src="https://i.imgur.com/L5kKWIG.png" class="featurette-image img-fluid mx-auto" alt=""
+                        style="width: 100%;">
+                </div>
+                <div class="col-sm-5">
+                    <h3 class="mmm-title">Lorem ipsum dolor.</h3>
+                    <p class="mmm-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatem
+                        harum iusto! Earum beatae fugit laborum, ab, harum adipisci eos soluta molestiae, ea sed
+                        inventore voluptas ducimus minus impedit reiciendis.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row featurette justify-content-md-center">
+            <div class="mmm">
+                <div class="col-sm-5">
+                    <h3 class="mmm-title">Lorem ipsum dolor.</h3>
+                    <p class="mmm-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatem
+                        harum iusto! Earum beatae fugit laborum, ab, harum adipisci eos soluta molestiae, ea sed
+                        inventore voluptas ducimus minus impedit reiciendis.</p>
+                </div>
+                <div class="col-sm-5">
+                    <img src="https://i.imgur.com/L5kKWIG.png" class="featurette-image img-fluid mx-auto" alt=""
+                        style="width: 100%;">
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>
+<div class="container-footer">
+    <!-- <div class="container">
         <div class="row ">
             <div class="col">
                 <span class="material-icons footer-icon"> local_hospital </span>
                 <span class="a">DocApp</span>
             </div>
-            <div class="col-auto d-flex">
+            <div class="col-sm-5 d-flex">
                 <span class="material-icons footer-icon"> email </span>
                 <span class="material-icons footer-icon"> live_help </span>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
