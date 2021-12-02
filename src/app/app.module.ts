@@ -19,20 +19,24 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatTableModule } from '@angular/material/table';
 import { NavbarComponent } from './components/welcome/navbar/navbar.component';
-import { LComponent } from './components/l/l.component';
+import { LoginComponent } from './components/welcome/login/login.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     WelcomeComponent,
     NavbarComponent,
-    LComponent
+    
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule, MatCardModule, MatDividerModule, MatProgressSpinnerModule, MatInputModule, MatListModule, MatFormFieldModule, MatIconModule, MatRadioModule, MatTableModule
+    MatButtonModule, MatCardModule, MatDividerModule, MatProgressSpinnerModule, MatInputModule, MatListModule, MatFormFieldModule, MatIconModule, MatRadioModule, MatTableModule,
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

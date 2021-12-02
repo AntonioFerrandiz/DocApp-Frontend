@@ -113,10 +113,57 @@
 .container-footer{
     background-color: #FBFCFF;
     min-height: 45vh;
+    padding: 2.5rem 0;
+}
+.brand-group{
+    align-items: center;
+    text-align: center;
+}
+.footer-brandName{
+    font-size: 1.5rem;
 }
 .footer-icon{
-    color: #FEFBF3;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    color: #7289fc;
+    margin: 0 5px;
+}
+.menu-group{
+    font-family: 'Ubuntu', sans-serif;
+}
+.menu-group .row .col-sm-4 h4{
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+}
+.list-nav{
+    padding-left: 1.5rem;
+}
+.contact-container{
+    padding: 1rem;
+}
+.social-title{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+}
+.footer-social-icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: center;
+    margin: 0 .3rem;
+    color: #FBFCFF;
+    background-color: #7289fc;
+    padding: .75rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.contact-form{
+    text-align: center;
+    padding: 1rem;
+}
+.contact-form p{
+    font-size: 1rem;
 }
 @media(max-width: 375px){
     .hero-row{
@@ -140,10 +187,13 @@
         padding: 0 1rem;
         font-size: 1.15rem;
     }
+    /* .margin-r{
+    } */
     .about-card{
         width: 20rem;
         text-align: center;
     }
+
     .about-card-title{
         font-size: 1.5rem;
         line-height: 1;

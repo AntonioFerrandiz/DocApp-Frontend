@@ -8,7 +8,7 @@
                     deserunt
                     ducimus impedit sunt delectus
                     voluptatum, pariatur obcaecati velit expedita dolorum</p>
-                <button class="hero-button" mat-raised-button>More info</button>
+                <button class="hero-button" mat-raised-button  routerLink="/home/login">More info</button>
             </div>
             <div class="col">
                 <img class="hero-img" src="https://i.imgur.com/0RwLKZx.png" alt="">
@@ -24,51 +24,54 @@
         <p> At, quasi ipsa sunt quam dolor dicta expedita suscipit inventore totam voluptatem voluptate saepe unde ullam
             consectetur accusantium tenetur temporibus sed necessitatibus!</p>
     </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-5 ">
+                <mat-card class="about-card">
+                    <mat-card-title class="about-card-title"> {{ cardTitle }} </mat-card-title>
+                    <mat-card-content class="about-card-description"> {{ cardDescription }} </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-5 ">
+                <mat-card class="about-card">
+                    <mat-card-title class="about-card-title"> {{ cardTitle }} </mat-card-title>
+                    <mat-card-content class="about-card-description"> {{ cardDescription }} </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
 
+        <div class="row justify-content-center">
+            <div class="col-sm-5 ">
+                <mat-card class="about-card">
+                    <mat-card-title class="about-card-title"> {{ cardTitle }} </mat-card-title>
+                    <mat-card-content class="about-card-description"> {{ cardDescription }} </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-5 ">
+                <mat-card class="about-card">
+                    <mat-card-title class="about-card-title"> {{ cardTitle }} </mat-card-title>
+                    <mat-card-content class="about-card-description"> {{ cardDescription }} </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
 
-    <div class="row justify-content-md-center">
-        <div class="col-sm-5 ">
-            <mat-card class="about-card">
-                <mat-card-title class="about-card-title"> {{ cardTitle }} </mat-card-title>
-                <mat-card-content class="about-card-description"> {{ cardDescription }} </mat-card-content>
-            </mat-card>
-        </div>
-        <div class="col-sm-5 ">
-            <mat-card class="about-card">
-                <mat-card-title class="about-card-title"> {{ cardTitle }} </mat-card-title>
-                <mat-card-content class="about-card-description"> {{ cardDescription }} </mat-card-content>
-            </mat-card>
-        </div>
-    </div>
-    <div class="row justify-content-md-center">
-        <div class="col-sm-5 ">
-            <mat-card class="about-card">
-                <mat-card-title class="about-card-title"> {{ cardTitle }} </mat-card-title>
-                <mat-card-content class="about-card-description"> {{ cardDescription }} </mat-card-content>
-            </mat-card>
-        </div>
-        <div class="col-sm-5 ">
-            <mat-card class="about-card">
-                <mat-card-title class="about-card-title"> {{ cardTitle }} </mat-card-title>
-                <mat-card-content class="about-card-description"> {{ cardDescription }} </mat-card-content>
-            </mat-card>
-        </div>
-    </div>
-    <div class="row justify-content-md-center">
-        <div class="col-sm-5 ">
-            <mat-card class="about-card">
-                <mat-card-title class="about-card-title"> {{ cardTitle }} </mat-card-title>
-                <mat-card-content class="about-card-description"> {{ cardDescription }} </mat-card-content>
-            </mat-card>
-        </div>
-        <div class="col-sm-5 ">
-            <mat-card class="about-card">
-                <mat-card-title class="about-card-title"> {{ cardTitle }} </mat-card-title>
-                <mat-card-content class="about-card-description"> {{ cardDescription }} </mat-card-content>
-            </mat-card>
+        <div class="row justify-content-center">
+            <div class="col-sm-5 ">
+                <mat-card class="about-card">
+                    <mat-card-title class="about-card-title"> {{ cardTitle }} </mat-card-title>
+                    <mat-card-content class="about-card-description"> {{ cardDescription }} </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-5 ">
+                <mat-card class="about-card">
+                    <mat-card-title class="about-card-title"> {{ cardTitle }} </mat-card-title>
+                    <mat-card-content class="about-card-description"> {{ cardDescription }} </mat-card-content>
+                </mat-card>
+            </div>
         </div>
     </div>
 </div>
+    
 <div class="container-about">
     <div class="container">
         <div class="row featurette justify-content-md-center mmm">
@@ -116,64 +119,36 @@
 
             </div>
         </div>
-        <!-- <div class="row featurette justify-content-md-center ">
-            <div class="mmm">
-                <div class="col-sm-5">
-                    <h3 class="mmm-title">Lorem ipsum dolor.</h3>
-                    <p class="mmm-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatem
-                        harum iusto! Earum beatae fugit laborum, ab, harum adipisci eos soluta molestiae, ea sed
-                        inventore voluptas ducimus minus impedit reiciendis.</p>
-                </div>
-                <div class="col-sm-5">
-                    <img src="https://i.imgur.com/L5kKWIG.png" class="featurette-image img-fluid mx-auto" alt=""
-                        style="width: 100%;">
-                </div>
-            </div>
-        </div>
-
-        <div class="row featurette justify-content-md-center ">
-            <div class="mmm">
-                <div class="col-sm-5">
-                    <img src="https://i.imgur.com/L5kKWIG.png" class="featurette-image img-fluid mx-auto" alt=""
-                        style="width: 100%;">
-                </div>
-                <div class="col-sm-5">
-                    <h3 class="mmm-title">Lorem ipsum dolor.</h3>
-                    <p class="mmm-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatem
-                        harum iusto! Earum beatae fugit laborum, ab, harum adipisci eos soluta molestiae, ea sed
-                        inventore voluptas ducimus minus impedit reiciendis.</p>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="row featurette justify-content-md-center">
-            <div class="mmm">
-                <div class="col-sm-5">
-                    <h3 class="mmm-title">Lorem ipsum dolor.</h3>
-                    <p class="mmm-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatem
-                        harum iusto! Earum beatae fugit laborum, ab, harum adipisci eos soluta molestiae, ea sed
-                        inventore voluptas ducimus minus impedit reiciendis.</p>
-                </div>
-                <div class="col-sm-5">
-                    <img src="https://i.imgur.com/L5kKWIG.png" class="featurette-image img-fluid mx-auto" alt=""
-                        style="width: 100%;">
-                </div>
-            </div>
-        </div> -->
     </div>
 </div>
 <div class="container-footer">
-    <!-- <div class="container">
-        <div class="row ">
-            <div class="col">
-                <span class="material-icons footer-icon"> local_hospital </span>
-                <span class="a">DocApp</span>
-            </div>
-            <div class="col-sm-5 d-flex">
-                <span class="material-icons footer-icon"> email </span>
-                <span class="material-icons footer-icon"> live_help </span>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-5">
+                <div class="brand-group text-center">
+                    <i class="fas fa-hospital footer-icon"></i>
+                    <span class="footer-brandName">DocApp</span>
+                </div>
+                <div class="contact-container">
+                    <h4 class="text-center social-title">Connect with us</h4>
+                    <div class="social-network-group text-center mt-2">
+                        <i class="fab fa-facebook-f footer-social-icon"></i>
+                        <i class="fab fa-twitter footer-social-icon"></i>
+                        <i class="far fa-envelope footer-social-icon"></i>
+                        <i class="fas fa-phone footer-social-icon"></i>
+                    </div>
+                    <div class="contact-form">
+                        <p>Subscribe to our newsletter to get news updates.</p>
+                        <form autocomplete="off">
+                            <mat-form-field appearance="outline" style="width: 100%;">
+                                <mat-label>Email</mat-label>
+                                <input type="email" matInput placeholder="Ex. name@domain.com">
+                            </mat-form-field>
+                            <button mat-raised-button style="width:100%; letter-spacing: 3px;">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-    </div> -->
+    </div>
 </div>
