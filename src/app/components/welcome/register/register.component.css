@@ -1,0 +1,57 @@
+.bg-container{
+    min-height: 100vh;
+    background-color: #5378F8;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+
+.login-container{
+    min-height: 75vh;
+    margin: 0 10rem;
+    border-radius: .5rem;
+    box-shadow: 10px 10px 5px -2px rgba(0,0,0,0.32);
+}
+.second{
+    background-color: #F5F6FA;
+    width: 45rem;
+}
+.form-container{
+    padding: 8rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+.form-container h2{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: .3rem;
+}
+.form-container p{
+    font-size: 1.1rem;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.form-container h5{
+    text-align: center;
+    font-size: .75rem;
+}
+.form-container a{
+    font-weight: bold;
+    cursor: pointer;
+    color: #6788FF;
+}
+.form-body{
+    margin-top: 1.5rem;
+}
+.form-body button{
+    background-color: #6788FF;
+    color: #F5F6FA;
+    width: 10rem;
+}
+.first{
+    background-color: #6788FF;
+    width: 45rem;
+}
+.login-form{
+    width: 100%;
+}

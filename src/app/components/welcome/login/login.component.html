@@ -1,0 +1,33 @@
+<div class="bg-container">
+    <div class="row login-container">
+        <div class="col first">
+            <div class="form-container">
+                <h2>Login</h2>
+                <p>Great to see you again!</p>
+               <div class="form-body">
+                <form autocomplete="off" class="text-center">
+                    <mat-form-field appearance="outline" class="login-form">
+                        <mat-label>Username</mat-label>
+                        <input matInput type="text">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="login-form">
+                        <mat-label>Identity document</mat-label>
+                        <input matInput type="number">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="login-form">
+                        <mat-label>Password</mat-label>
+                        <input matInput type="password">
+                    </mat-form-field>
+                    <button mat-raised-button>Login</button>
+                    
+                </form>
+                <h5>Dont have account? <a routerLink = "/home/register">Register now</a></h5>
+               </div>
+            </div>
+        </div>
+        <div class="col second">
+        </div>
+    </div>
+</div>

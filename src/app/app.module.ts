@@ -20,6 +20,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatTableModule } from '@angular/material/table';
 import { NavbarComponent } from './components/welcome/navbar/navbar.component';
 import { LoginComponent } from './components/welcome/login/login.component';
+import { RegisterComponent } from './components/welcome/register/register.component';
 
 @NgModule({
   declarations: [
@@ -27,16 +28,16 @@ import { LoginComponent } from './components/welcome/login/login.component';
     HomeComponent,
     WelcomeComponent,
     NavbarComponent,
-    
     LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule, MatCardModule, MatDividerModule, MatProgressSpinnerModule, MatInputModule, MatListModule, MatFormFieldModule, MatIconModule, MatRadioModule, MatTableModule,
-    
-    
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
