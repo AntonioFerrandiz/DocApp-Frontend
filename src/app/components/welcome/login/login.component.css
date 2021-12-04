@@ -16,8 +16,16 @@
     background-color: #F5F6FA;
     width: 45rem;
 }
+.back-icon-container{
+    padding: 1rem;
+}
+.back-icon{
+    font-size: 2rem;
+    color: #191A19;
+    cursor: pointer;
+}
 .form-container{
-    padding: 8rem;
+    padding: 5rem 8rem 8rem 8rem;
     font-family: 'Ubuntu', sans-serif;
 }
 .form-container h2{
@@ -54,4 +62,31 @@
 }
 .login-form{
     width: 100%;
+}
+
+@media(max-width: 375px){
+    .first{
+        width: 20rem;
+    }
+    .hide{
+        display:none;
+    }
+    .back-icon-container{
+        padding: 1rem 0;
+    }
+    .back-icon{
+        font-size: 1.5rem;
+    }
+    .form-container{
+        padding-top: 4rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .form-container h2{
+        font-size: 2rem;
+    }
+    .form-container p{
+        font-size: .75rem;
+        letter-spacing: 1.75px;
+    }
 }

@@ -6,7 +6,7 @@
     align-items : center;
 }
 
-.login-container{
+.register-container{
     min-height: 75vh;
     margin: 0 10rem;
     border-radius: .5rem;
@@ -16,8 +16,9 @@
     background-color: #F5F6FA;
     width: 45rem;
 }
+
 .form-container{
-    padding: 8rem;
+    padding: 6rem 8rem;
     font-family: 'Ubuntu', sans-serif;
 }
 .form-container h2{
@@ -52,6 +53,34 @@
     background-color: #6788FF;
     width: 45rem;
 }
-.login-form{
+.register-form{
     width: 100%;
+}
+
+@media(max-width: 375px){
+    .second{
+        width: 20rem;
+    }
+    .hide{
+        display:none;
+    }
+    .back-icon-container{
+        padding: 1rem 0;
+    }
+    .back-icon{
+        font-size: 1.5rem;
+    }
+    .form-container{
+        padding-top: 4rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .form-container h2{
+        font-size: 2rem;
+    }
+    .form-container p{
+        font-size: .75rem;
+        letter-spacing: 1.75px;
+    }
 }
