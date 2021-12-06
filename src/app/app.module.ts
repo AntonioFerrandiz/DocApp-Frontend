@@ -18,9 +18,17 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatTableModule } from '@angular/material/table';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
+
 import { NavbarComponent } from './components/welcome/navbar/navbar.component';
 import { LoginComponent } from './components/welcome/login/login.component';
 import { RegisterComponent } from './components/welcome/register/register.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { PatientsComponent } from './components/dashboard/patients/patients.component';
+import { AboutComponent } from './components/welcome/home/about/about.component';
+import { SharedModule } from 'src/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -30,12 +38,14 @@ import { RegisterComponent } from './components/welcome/register/register.compon
     NavbarComponent,
     LoginComponent,
     RegisterComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule, MatCardModule, MatDividerModule, MatProgressSpinnerModule, MatInputModule, MatListModule, MatFormFieldModule, MatIconModule, MatRadioModule, MatTableModule,
+    SharedModule,
+    MatButtonModule, MatCardModule, MatDividerModule, MatProgressSpinnerModule, MatInputModule, MatListModule, MatFormFieldModule, MatIconModule, MatRadioModule, MatTableModule, MatSidenavModule, MatToolbarModule
 
 
   ],
