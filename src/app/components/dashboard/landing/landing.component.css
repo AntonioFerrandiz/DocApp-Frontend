@@ -1,0 +1,16 @@
+
+.container-dashboard{
+    font-family: 'Ubuntu', sans-serif;
+    min-height: 75vh;
+    padding: 2rem;
+}
+.actual-page{
+    color: #9D9D9D;
+    letter-spacing: 1px;
+}
+.container-title{
+    font-size: 1.5rem;
+}
+.container-title span{
+    color: #94B3FD;
+}
