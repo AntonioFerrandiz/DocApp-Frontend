@@ -1,0 +1,25 @@
+.search-container{
+    background-color: #FFF;
+    padding: 3rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+.search-container-title{
+    
+    font-family: 'Ubuntu', sans-serif !important;
+    border-left: 3px solid #94B3FD;
+    padding-left: .75rem;
+}
+.search-input{
+    width: 100%;
+    
+}
+
+.search-button{
+    width: 15rem;
+}
+.col-center{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
