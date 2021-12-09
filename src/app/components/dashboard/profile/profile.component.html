@@ -1,1 +1,36 @@
-<p>profile works!</p>
+<div style="background-color: #E5ECF4; min-height: 93vh;">
+    <div class="container">
+        <div class="profile-container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <mat-card style="padding: 1.5rem;">
+                        <div class="profile-image">
+                            <img mat-card-lg-image src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+                                style="border-radius: 50%;">
+                        </div>
+                        <div class="profile-name">
+                            <h2>Antonio Ferrandiz</h2>
+                        </div>
+                        <mat-card-content>
+                            <mat-selection-list [multiple]="false">
+                                <mat-list-option (click)="showEditProfile = false; showOverview = true">
+                                    <mat-icon matListIcon >home</mat-icon>
+                                    Overview
+                                </mat-list-option>
+                                <mat-list-option (click)="showEditProfile = true; showOverview = false">
+                                    <mat-icon matListIcon>settings</mat-icon>
+                                    Account Settings
+                                </mat-list-option>
+
+                            </mat-selection-list>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+                <div class="col">
+                    <app-edit-profile *ngIf="showEditProfile"></app-edit-profile>
+                    <app-overview *ngIf="showOverview"></app-overview>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

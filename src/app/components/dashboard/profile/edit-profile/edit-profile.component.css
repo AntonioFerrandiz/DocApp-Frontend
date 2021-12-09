@@ -1,0 +1,42 @@
+.input-form-group{
+    padding: .5rem 0;
+}
+.input-form-group span{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+}
+.input-form-group input{
+    width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    padding: .4rem .25rem;
+    border: 2px solid #EAEAEA;
+    outline: none;
+    border-radius: .25rem;
+}
+.input-form-group input:hover{
+    border-color: #000;
+}
+.input-form-group input:focus{
+    border-color: #94B3FD;
+}
+
+.input-form-group textarea{
+    width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    padding: .4rem .25rem;
+    border: 2px solid #EAEAEA;
+    outline: none;
+    border-radius: .25rem;
+    resize:none;
+}
+.input-form-group textarea:hover{
+    border-color: #000;
+}
+.input-form-group textarea:focus{
+    border-color: #94B3FD;
+}
+
+.save-button{
+    float: right;
+    margin-top: .5rem;
+}

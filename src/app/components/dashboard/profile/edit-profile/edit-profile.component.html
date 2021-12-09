@@ -1,1 +1,63 @@
-???? XD
+<mat-card >
+    <mat-card-content>
+        <mat-tab-group >
+            <mat-tab label="Personal info">
+                <ng-template matTabContent>
+                    <div style="padding-top: 1.5rem;">
+                        <form autocomplete="off">
+    
+                            <div class="input-form-group">
+                                <span>Firstname</span>
+                                <div class="">
+                                    <input type="text" placeholder="Antonio">
+                                </div>
+                            </div>
+    
+                            <div class="input-form-group">
+                                <span>Lastname</span>
+                                <div class="">
+                                    <input type="text" placeholder="Ferrandiz">
+                                </div>
+                            </div>
+    
+                            <div class="input-form-group">
+                                <span>Username</span>
+                                <div class="">
+                                    <input type="text" placeholder="afb">
+                                </div>
+                            </div>
+
+                            <div class="input-form-group">
+                                <span>Identity document</span>
+                                <div class="">
+                                    <input type="number" placeholder="73234665" [disabled]= "!disabled">
+                                </div>
+                            </div>
+    
+                            <div class="input-form-group">
+                                <span>About</span>
+                                <div class="">
+                                    <textarea rows="4"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="save-button">
+                                <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                                    <mat-icon>save</mat-icon>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </ng-template>
+            </mat-tab>
+            <mat-tab label="Change avatar">
+                <ng-template matTabContent>
+                </ng-template>
+            </mat-tab>
+            <mat-tab label="Change password">
+                <ng-template matTabContent>
+                </ng-template>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card-content>
+</mat-card>
