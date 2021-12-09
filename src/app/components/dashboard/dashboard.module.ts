@@ -8,6 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
 import { LandingComponent } from './landing/landing.component';
 import { SharedModule } from 'src/shared/shared.module';
+import { OverviewComponent } from './profile/overview/overview.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { SharedModule } from 'src/shared/shared.module';
     PatientsComponent,
     ProfileComponent,
     EditProfileComponent,
-    LandingComponent
+    LandingComponent,
+    OverviewComponent
   ],
   imports: [
     CommonModule,
