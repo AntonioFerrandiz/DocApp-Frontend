@@ -1,3 +1,6 @@
+/* mat-card{
+    min-height: 75vh;
+} */
 .input-form-group{
     padding: .5rem 0;
 }
@@ -8,7 +11,7 @@
 .input-form-group input{
     width: 100%;
     font-family: 'Ubuntu', sans-serif;
-    padding: .4rem .25rem;
+    padding: .875rem .65rem;
     border: 2px solid #EAEAEA;
     outline: none;
     border-radius: .25rem;
@@ -36,6 +39,29 @@
     border-color: #94B3FD;
 }
 
+.image-form-group {
+    font-family: 'Ubuntu', sans-serif;
+}
+.image-form-group h4{
+    text-align: center;
+}
+.image-form-group input{
+    padding: 4.5rem 25%;
+    text-align: center;
+    width: 100%;
+    height: 10rem;
+    border: 3px dashed #94B3FD;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+.cp-form{
+    width: 100%;
+}
+.btn-form{
+    color: #FFF;
+    background-color: #6788ff;
+    float: right;
+}
 .save-button{
     float: right;
     margin-top: .5rem;

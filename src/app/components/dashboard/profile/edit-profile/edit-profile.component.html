@@ -1,25 +1,26 @@
-<mat-card >
+<mat-card>
     <mat-card-content>
-        <mat-tab-group >
+        <mat-tab-group>
             <mat-tab label="Personal info">
                 <ng-template matTabContent>
                     <div style="padding-top: 1.5rem;">
+                        <h2 class="text-center">Your personal info</h2>
                         <form autocomplete="off">
-    
+
                             <div class="input-form-group">
                                 <span>Firstname</span>
                                 <div class="">
                                     <input type="text" placeholder="Antonio">
                                 </div>
                             </div>
-    
+
                             <div class="input-form-group">
                                 <span>Lastname</span>
                                 <div class="">
                                     <input type="text" placeholder="Ferrandiz">
                                 </div>
                             </div>
-    
+
                             <div class="input-form-group">
                                 <span>Username</span>
                                 <div class="">
@@ -30,10 +31,10 @@
                             <div class="input-form-group">
                                 <span>Identity document</span>
                                 <div class="">
-                                    <input type="number" placeholder="73234665" [disabled]= "!disabled">
+                                    <input type="number" placeholder="73234665" [disabled]="!disabled">
                                 </div>
                             </div>
-    
+
                             <div class="input-form-group">
                                 <span>About</span>
                                 <div class="">
@@ -52,10 +53,42 @@
             </mat-tab>
             <mat-tab label="Change avatar">
                 <ng-template matTabContent>
+                    <div style="padding-top: 1.5rem;">
+                        <h2 class="text-center">Change your avatar</h2>
+                        <!-- <input class="ng-hide" id="input-file-id" multiple type="file" />
+                        <label for="input-file-id" class="md-button md-raised md-primary">Choose Files</label> -->
+                        <div class="image-form-group">
+                            <form action="">
+                                <input type="file" class="file-upload" onchange="console.log(event.target.files)">
+                                <button mat-raised-button class="btn-form">Upload</button>
+                            </form>
+                        </div>
+                    </div>
                 </ng-template>
             </mat-tab>
             <mat-tab label="Change password">
                 <ng-template matTabContent>
+                    <div style="padding-top: 1.5rem;">
+                        <h2 class="text-center">Change your password</h2>
+                        <form action="">
+                            <mat-form-field appearance="outline" class="cp-form">
+                                <mat-label>Old Password</mat-label>
+                                <input matInput type="password">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline" class="cp-form">
+                                <mat-label>New password</mat-label>
+                                <input matInput type="password">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline" class="cp-form">
+                                <mat-label>Confirm new password</mat-label>
+                                <input matInput type="password">
+                            </mat-form-field>
+
+                            <button mat-raised-button class="btn-form">Confirm</button>
+                        </form>
+                    </div>
                 </ng-template>
             </mat-tab>
         </mat-tab-group>
