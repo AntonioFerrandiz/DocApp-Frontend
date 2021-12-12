@@ -8,22 +8,22 @@
                 <h2>Login</h2>
                 <p>Great to see you again!</p>
                <div class="form-body">
-                <form autocomplete="off" class="text-center" >
+                <form autocomplete="off" class="text-center" [formGroup]="login" (ngSubmit)="log()">
                     <mat-form-field appearance="outline" class="login-form" >
                         <mat-label>Username</mat-label>
-                        <input matInput type="text">
+                        <input matInput type="text" formControlName="username">
                     </mat-form-field>
 
                     <mat-form-field appearance="outline" class="login-form" >
                         <mat-label>Identity document</mat-label>
-                        <input matInput type="number">
+                        <input matInput type="number" formControlName="identityDocument">
                     </mat-form-field>
 
                     <mat-form-field appearance="outline" class="login-form">
                         <mat-label>Password</mat-label>
-                        <input matInput type="password">
+                        <input matInput type="password" formControlName="password">
                     </mat-form-field>
-                    <button mat-raised-button type="submit" routerLink="/dashboard">Login</button>
+                    <button mat-raised-button type="submit" [disabled]="login.invalid">Login</button>
                     
                 </form>
                 <h5>Dont have account? <a routerLink = "/home/register">Register now</a></h5>

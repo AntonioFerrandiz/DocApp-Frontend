@@ -6,39 +6,53 @@
             <div class="form-container">
                 <h2>Register</h2>
                 <p>Thanks for choosing DocApp!</p>
-               <div class="form-body">
-                <form autocomplete="off" class="text-center">
-                    <mat-form-field appearance="outline" class="register-form">
-                        <mat-label>Username</mat-label>
-                        <input matInput type="text">
-                    </mat-form-field>
+                <div class="form-body">
+                    <form autocomplete="off" class="text-center" [formGroup]="register" (ngSubmit)=registerUser()>
+                        <div class="row">
+                            <div class="col">
+                                <mat-form-field appearance="outline" class="register-form">
+                                    <mat-label>Firstname</mat-label>
+                                    <input matInput type="text" formControlName="firstname">
+                                </mat-form-field>
+                            </div>
+                            <div class="col">
+                                <mat-form-field appearance="outline" class="register-form">
+                                    <mat-label>Lastname</mat-label>
+                                    <input matInput type="text" formControlName="lastname">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <mat-form-field appearance="outline" class="register-form">
+                            <mat-label>Username</mat-label>
+                            <input matInput type="text" formControlName="username">
+                        </mat-form-field>
 
-                    <mat-form-field appearance="outline" class="register-form">
-                        <mat-label>Email</mat-label>
-                        <input matInput type="email">
-                    </mat-form-field>
+                        <mat-form-field appearance="outline" class="register-form">
+                            <mat-label>Email</mat-label>
+                            <input matInput type="email" formControlName="email">
+                        </mat-form-field>
 
-                    <mat-form-field appearance="outline" class="register-form">
-                        <mat-label>Identity document</mat-label>
-                        <input matInput type="number">
-                    </mat-form-field>
+                        <mat-form-field appearance="outline" class="register-form">
+                            <mat-label>Identity document</mat-label>
+                            <input matInput type="number" formControlName="identityDocument">
+                        </mat-form-field>
 
-                    <mat-form-field appearance="outline" class="register-form">
-                        <mat-label>Password</mat-label>
-                        <input matInput type="password">
-                    </mat-form-field>
+                        <mat-form-field appearance="outline" class="register-form">
+                            <mat-label>Password</mat-label>
+                            <input matInput type="password" formControlName="password">
+                        </mat-form-field>
 
-                    <mat-form-field appearance="outline" class="register-form">
-                        <mat-label>Confirm the password</mat-label>
-                        <input matInput type="text">
-                    </mat-form-field>
-                    <button mat-raised-button routerLink = "/home/login">Register</button>
-                    
-                </form>
-                <h5>Already have an account? <a routerLink = "/home/login">Login now</a></h5>
-               </div>
+                        <mat-form-field appearance="outline" class="register-form">
+                            <mat-label>Confirm the password</mat-label>
+                            <input matInput type="password" formControlName="confirmPassword">
+                        </mat-form-field>
+                        <button mat-raised-button type="submit">Register</button>
+
+                    </form>
+                    <h5>Already have an account? <a routerLink="/home/login">Login now</a></h5>
+                </div>
             </div>
         </div>
-        
+
     </div>
 </div>
