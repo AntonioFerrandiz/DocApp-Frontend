@@ -18,6 +18,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -27,12 +28,13 @@ import { MatTabsModule } from '@angular/material/tabs';
     CommonModule,
     SharedRoutingModule,
     ReactiveFormsModule,
-    FormsModule,
+    FormsModule,ToastrModule,
     MatButtonModule, MatCardModule, MatDividerModule, MatProgressSpinnerModule, MatInputModule, MatListModule, MatFormFieldModule, MatIconModule, MatRadioModule, MatTableModule, MatSidenavModule, MatToolbarModule, MatTabsModule
   ], exports: [
     LoadingComponent,
     ReactiveFormsModule,
     FormsModule,
+    ToastrModule,
     MatButtonModule, MatCardModule, MatDividerModule, MatProgressSpinnerModule, MatInputModule, MatListModule, MatFormFieldModule, MatIconModule, MatRadioModule, MatTableModule, MatSidenavModule, MatToolbarModule, MatTabsModule
   ]
 })

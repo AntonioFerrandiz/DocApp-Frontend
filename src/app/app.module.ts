@@ -29,6 +29,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PatientsComponent } from './components/dashboard/patients/patients.component';
 import { AboutComponent } from './components/welcome/home/about/about.component';
 import { SharedModule } from 'src/shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -41,9 +44,12 @@ import { SharedModule } from 'src/shared/shared.module';
     DashboardComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ToastrModule,
+    HttpClientModule,
     SharedModule,
     MatButtonModule, MatCardModule, MatDividerModule, MatProgressSpinnerModule, MatInputModule, MatListModule, MatFormFieldModule, MatIconModule, MatRadioModule, MatTableModule, MatSidenavModule, MatToolbarModule
 
