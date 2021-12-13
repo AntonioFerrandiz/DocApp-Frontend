@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 // import { ToastrService } from 'ngx-toastr';
 import { User } from 'src/app/models/user.model';
 import { LoginService } from 'src/app/services/login.service';
@@ -13,12 +14,12 @@ import { LoginService } from 'src/app/services/login.service';
 export class LoginComponent implements OnInit {
   login: FormGroup;
   constructor(private fb: FormBuilder,
-            // private toastr: ToastrService,
+            private toastr: ToastrService,
             private router: Router,
             private loginService: LoginService) {
               this.login = this.fb.group({
                 username: ['', Validators.required],
-                identityDocument: ['', Validators.required],
+                identityDocument: ['', [Validators.required, Validators.maxLength(8), Validators.pattern("^[0-9]*$")]],
                 password: ['', Validators.required]
               })
              }
@@ -36,10 +37,9 @@ export class LoginComponent implements OnInit {
       console.log(data);
       this.loginService.setLocalStorage(data.token);
       this.router.navigate(['/dashboard'])
+      this.toastr.info('Session successfully logged in','Hello!');
     }, error =>{
-      console.log(error);
-      console.log('message ' + error.error.message)
-      // this.toastr.error(error.error.message, 'Error');
+      this.toastr.error(error.error.message, 'Error');
       this.login.reset();
     })
   }

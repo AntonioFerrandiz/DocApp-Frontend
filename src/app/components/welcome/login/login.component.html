@@ -12,21 +12,36 @@
                     <mat-form-field appearance="outline" class="login-form" >
                         <mat-label>Username</mat-label>
                         <input matInput type="text" formControlName="username">
+                        <mat-error class="login-error"
+                                      *ngIf="login.get('username').hasError('required') && login.get('username').touched">
+                                      Username is required</mat-error>
                     </mat-form-field>
 
                     <mat-form-field appearance="outline" class="login-form" >
                         <mat-label>Identity document</mat-label>
-                        <input matInput type="number" formControlName="identityDocument">
+                        <input matInput type="text" formControlName="identityDocument">
+                        <mat-error class="login-error"
+                                      *ngIf="login.get('identityDocument').hasError('required') && login.get('identityDocument').touched">
+                                      Identity document is required</mat-error>
+                        <mat-error class="login-error"
+                                      *ngIf="login.get('identityDocument').hasError('maxlength') && login.get('identityDocument').touched">
+                                      The identity document must have a maximum of 8 characters</mat-error>
+                        <mat-error class="login-error"
+                                      *ngIf="login.get('identityDocument').hasError('pattern') && login.get('identityDocument').touched">
+                                      Enter only numbers</mat-error>
                     </mat-form-field>
 
                     <mat-form-field appearance="outline" class="login-form">
                         <mat-label>Password</mat-label>
                         <input matInput type="password" formControlName="password">
+                        <mat-error class="login-error"
+                                      *ngIf="login.get('password').hasError('required') && login.get('password').touched">
+                                      Password is required</mat-error>
                     </mat-form-field>
                     <button mat-raised-button type="submit" [disabled]="login.invalid">Login</button>
                     
                 </form>
-                <h5>Dont have account? <a routerLink = "/home/register">Register now</a></h5>
+                <h5>Dont have account? <a routerLink = "/home/login">login now</a></h5>
                </div>
             </div>
         </div>
