@@ -1,3 +1,6 @@
+.register-error{
+    color: #FF4848;
+}
 .bg-container{
     min-height: 100vh;
     background-color: #5378F8;
