@@ -28,13 +28,12 @@ import { ToastrModule } from 'ngx-toastr';
     CommonModule,
     SharedRoutingModule,
     ReactiveFormsModule,
-    FormsModule,ToastrModule,
+    FormsModule,
     MatButtonModule, MatCardModule, MatDividerModule, MatProgressSpinnerModule, MatInputModule, MatListModule, MatFormFieldModule, MatIconModule, MatRadioModule, MatTableModule, MatSidenavModule, MatToolbarModule, MatTabsModule
   ], exports: [
     LoadingComponent,
     ReactiveFormsModule,
     FormsModule,
-    ToastrModule,
     MatButtonModule, MatCardModule, MatDividerModule, MatProgressSpinnerModule, MatInputModule, MatListModule, MatFormFieldModule, MatIconModule, MatRadioModule, MatTableModule, MatSidenavModule, MatToolbarModule, MatTabsModule
   ]
 })
