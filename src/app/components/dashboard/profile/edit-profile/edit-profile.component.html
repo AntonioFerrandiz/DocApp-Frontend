@@ -10,28 +10,28 @@
                             <div class="input-form-group">
                                 <span>Firstname</span>
                                 <div class="">
-                                    <input type="text" placeholder="Antonio">
+                                    <input type="text" placeholder="{{ firstname }}">
                                 </div>
                             </div>
 
                             <div class="input-form-group">
                                 <span>Lastname</span>
                                 <div class="">
-                                    <input type="text" placeholder="Ferrandiz">
+                                    <input type="text" placeholder="{{ lastname }}">
                                 </div>
                             </div>
 
                             <div class="input-form-group">
                                 <span>Username</span>
                                 <div class="">
-                                    <input type="text" placeholder="afb">
+                                    <input type="text" placeholder="{{ username }}">
                                 </div>
                             </div>
 
                             <div class="input-form-group">
                                 <span>Identity document</span>
                                 <div class="">
-                                    <input type="number" placeholder="73234665" [disabled]="!disabled">
+                                    <input type="number" placeholder="{{ identityDocument }}" [disabled]="!disabled">
                                 </div>
                             </div>
 
