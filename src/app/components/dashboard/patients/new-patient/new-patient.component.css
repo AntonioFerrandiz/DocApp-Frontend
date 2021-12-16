@@ -1,0 +1,15 @@
+mat-card{
+    font-family: 'Ubuntu', sans-serif !important;
+    border-radius: 1rem;
+}
+.newpatient-form{
+    width: 100%;
+}
+mat-card-actions button{
+    background-color: #94B3FD;
+    color: #fff;
+    padding: 0rem 4rem;
+}
+.patient-error{
+    color: #FF4848;
+}
