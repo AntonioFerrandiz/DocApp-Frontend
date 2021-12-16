@@ -9,15 +9,19 @@ import { EditProfileComponent } from './profile/edit-profile/edit-profile.compon
 import { LandingComponent } from './landing/landing.component';
 import { SharedModule } from 'src/shared/shared.module';
 import { OverviewComponent } from './profile/overview/overview.component';
+import { NewPatientComponent } from './patients/new-patient/new-patient.component';
+
 
 
 @NgModule({
   declarations: [
     PatientsComponent,
     ProfileComponent,
+    NewPatientComponent,
     EditProfileComponent,
     LandingComponent,
-    OverviewComponent
+    OverviewComponent,
+    
   ],
   imports: [
     CommonModule,
