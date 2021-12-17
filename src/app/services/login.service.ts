@@ -18,6 +18,9 @@ export class LoginService {
   login(user: User): Observable<any> {
     return this.http.post(this.myAppUrl + this.myApiUrl, user);
   }
+  getUserData(): Observable<any>{
+    return this.http.get(this.myAppUrl + this.myApiUrl + '/GetUserData')
+  }
   setLocalStorage(data): void {
     localStorage.setItem('token', data);
   }
