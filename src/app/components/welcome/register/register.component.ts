@@ -38,7 +38,8 @@ export class RegisterComponent implements OnInit {
       password: this.register.value.password,
     }
     this.userService.saveUser(user).subscribe(data => {
-      console.log(data);
+      this.toastr.info('You have successfully registered', '(:')
+      this.router.navigate(['/login'])
     }, error => {
       this.toastr.error(error.error.message, 'Error');
       // console.log(error.error.message);
