@@ -25,8 +25,40 @@
     background-color: #5C7AEA;
     color: #FFF;
 }
+.newPatient-container{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.new-button{
+    background-color: #94B3FD;
+    color: #FFF;
+    padding: 0rem 5rem;
+}
 .col-center{
    display: flex;
    align-items: center;
    justify-content: center;
+}
+.gender-icon{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-male{
+    color: #5C7AEA;
+}
+.fa-female{
+    color: #FF87CA;
+}
+.patient-register h4{
+    margin-bottom: 0;
+}
+.medicalH-button{
+    color: #fff;
+    background-color: #5C7AEA;
+}
+.settings-button{
+    background-color: #57CC99;
+    color: #fff;
 }
