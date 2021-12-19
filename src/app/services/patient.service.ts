@@ -20,4 +20,10 @@ export class PatientService {
    GetListPatientsByUser(): Observable<any>{
      return this.http.get(this.myAppUrl + this.myApiUrl + '/GetListPatientsByUser');
    }
+   GetNumberOfPatients(): Observable<any>{
+     return this.http.get(this.myAppUrl + this.myApiUrl + '/GetNumberOfPatients')
+   }
+   GetListOfGenders(): Observable<any>{
+     return this.http.get(this.myAppUrl + this.myApiUrl + '/GetListOfGenders')
+   }
 }
