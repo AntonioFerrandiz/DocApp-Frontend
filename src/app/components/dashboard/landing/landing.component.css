@@ -30,6 +30,17 @@ div{
     border-radius: 50%;
     color: #FFF;
 }
+.icon{
+    background-color: #94B3FD;
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #FFF;
+}
 .col-center{
     display: flex;
     justify-content: center;

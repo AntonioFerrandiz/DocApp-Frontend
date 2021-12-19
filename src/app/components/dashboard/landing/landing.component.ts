@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
+import { PatientService } from 'src/app/services/patient.service';
 
 @Component({
   selector: 'app-landing',
@@ -8,16 +9,30 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class LandingComponent implements OnInit {
   firstname: string;
-  constructor(private loginService: LoginService) { }
+  totalPatients: number;
+  gendersList: any = [];
+  constructor(private loginService: LoginService,
+              private patientService: PatientService) { }
 
   ngOnInit(): void {
     this.getUserInfo()
+    this.getTotalPatients();
+    this.getListOfGenders();
   }
   getUserInfo(): void{
     this.loginService.getUserData().subscribe(data =>{
-      console.log(data);
       this.firstname = data["firstname"];
-      console.log(this.firstname)
+    })
+  }
+  getTotalPatients():void{
+    this.patientService.GetNumberOfPatients().subscribe(data =>{
+      this.totalPatients = data;
+    })
+  }
+  getListOfGenders(): void{
+    this.patientService.GetListOfGenders().subscribe(data => {
+      this.gendersList = data;
+      console.log(this.gendersList)
     })
   }
 }
