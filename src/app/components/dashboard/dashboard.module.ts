@@ -11,6 +11,7 @@ import { SharedModule } from 'src/shared/shared.module';
 import { OverviewComponent } from './profile/overview/overview.component';
 import { NewPatientComponent } from './patients/new-patient/new-patient.component';
 
+import { NgChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import { NewPatientComponent } from './patients/new-patient/new-patient.componen
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    SharedModule
+    SharedModule,NgChartsModule
   ]
 })
 export class DashboardModule { }

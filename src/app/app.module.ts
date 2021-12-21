@@ -20,6 +20,7 @@ import { SharedModule } from 'src/shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,8 @@ import { ToastrModule } from 'ngx-toastr';
     ToastrModule.forRoot(),
     HttpClientModule,
     SharedModule,
+    NgChartsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
