@@ -12,6 +12,9 @@ import { OverviewComponent } from './profile/overview/overview.component';
 import { NewPatientComponent } from './patients/new-patient/new-patient.component';
 
 import { NgChartsModule } from 'ng2-charts';
+import { MedicalHistoryComponent } from './patients/medical-history/medical-history.component';
+import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
+import { MedicalHistoryFormComponent } from './patients/medical-history/medical-history-form/medical-history-form.component';
 
 
 @NgModule({
@@ -22,12 +25,18 @@ import { NgChartsModule } from 'ng2-charts';
     EditProfileComponent,
     LandingComponent,
     OverviewComponent,
+    MedicalHistoryComponent,
+    MedicalHistoryFormComponent,
     
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    SharedModule,NgChartsModule
+    SharedModule,NgChartsModule, MatDialogModule
+  ],
+  entryComponents: [MedicalHistoryFormComponent],
+  providers: [
+    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}
   ]
 })
 export class DashboardModule { }
