@@ -1,0 +1,56 @@
+<h2>New medical history for {{ data.firstname }}</h2>
+<form autocomplete="off" [formGroup] = "newMedicalHistory" (ngSubmit) = "addMedicalHistory()">
+    <div class="row">
+        <div class="col">
+            <mat-form-field appearance="outline">
+                <mat-label>Weight</mat-label>
+                <input type="number" class="form-input" matInput formControlName="weight">
+                <mat-hint>Weight must be entered in kg</mat-hint>
+            </mat-form-field>
+        </div>
+        <div class="col">
+            <mat-form-field appearance="outline">
+                <mat-label>Height</mat-label>
+                <input type="number" class="form-input" matInput formControlName="height">
+                <mat-hint>Height must be entered in cm</mat-hint>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <mat-form-field appearance="outline">
+                <mat-label>Age</mat-label>
+                <input type="number" class="form-input" matInput formControlName="age">
+            </mat-form-field>
+        </div>
+        <div class="col">
+            <mat-form-field appearance="outline">
+                <mat-label>Time Period</mat-label>
+                <mat-select formControlName="timePeriod">
+                    <mat-option value="Days">Days</mat-option>
+                    <mat-option value="Weeks">Weeks</mat-option>
+                    <mat-option value="Months">Months</mat-option>
+                    <mat-option value="Years">Years</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Observations</mat-label>
+            <textarea class="form-input" matInput formControlName rows="4" formControlName="observations"></textarea>
+        </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Prescribed medication</mat-label>
+            <input type="text" class="form-input" matInput placeholder="Ex. Paracetamol Q8H" formControlName="prescribedMedication">
+        </mat-form-field>
+    </div>
+    <mat-card-actions class="text-center">
+        <button mat-raised-button mat-dialog-close class="cancel-btn">Cancel</button>
+        <button mat-raised-button class="add-btn" type="submit">Add</button>
+    </mat-card-actions>
+</form>
