@@ -1,0 +1,38 @@
+<div style="background-color: #E5ECF4; min-height: 93vh;;">
+    <div class="container" style="padding: 2rem;">
+        <p class="actual-page">Home / Patients / Medical History / {{ patientData.firstname }} {{ patientData.lastname
+            }}</p>
+        <div class="patient-info-container">
+            <mat-card class="patient-card">
+                <mat-card-title class="mb-3">
+                    <h2>{{ patientData.firstname }} {{ patientData.lastname }}</h2>
+                </mat-card-title>
+                <mat-divider></mat-divider>
+                <mat-card-content class="mt-5">
+
+                    <div class="row">
+                        <div class="col">
+                            <h3>Phone number</h3>
+                            <div class="h3-border"></div>
+                            <p>{{ patientData.phoneNumber }}</p>
+                        </div>
+                        <div class="col">
+                            <h3>Gender</h3>
+                            <div class="h3-border"></div>
+                            <p>{{ patientData.gender }}</p>
+                        </div>
+                        <div class="col">
+                            <h3>Day of registration</h3>
+                            <div class="h3-border"></div>
+                            <p>{{ patientData.dateCreated | date: 'dd/MM/yyyy' }}</p>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="add-medical-history-container">
+            <button mat-raised-button (click)="openDialog()">New Medical History</button>
+        </div>
+        <hr>
+    </div>
+</div>
