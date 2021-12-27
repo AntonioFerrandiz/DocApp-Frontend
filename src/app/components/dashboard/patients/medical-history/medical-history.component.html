@@ -34,5 +34,39 @@
             <button mat-raised-button (click)="openDialog()">New Medical History</button>
         </div>
         <hr>
+        <div class="medical-history-list">
+            <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)">
+                <ng-container matColumnDef="age">
+                    <th mat-header-cell *matHeaderCellDef>Age</th>
+                    <td mat-cell *matCellDef="let element">{{ element['age'] }}</td>
+                </ng-container>
+                <ng-container matColumnDef="timePeriod">
+                    <th mat-header-cell *matHeaderCellDef>Time Period</th>
+                    <td mat-cell *matCellDef="let element">{{ element['timePeriod'] }}</td>
+                </ng-container>
+                <ng-container matColumnDef="heigth">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by heigth">Heigth (cm)</th>
+                    <td mat-cell *matCellDef="let element">{{ element['height'] }}</td>
+                </ng-container>
+                <ng-container matColumnDef="weigth"  >
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by weigth">Weigth (kg)</th>
+                    <td mat-cell *matCellDef="let element">{{ element['weight'] }}</td>
+                </ng-container>
+                <ng-container matColumnDef="details">
+                    <th mat-header-cell *matHeaderCellDef>Observations</th>
+                    <td mat-cell *matCellDef="let element">{{ element['details'] }}</td>
+                </ng-container>
+                <ng-container matColumnDef="prescribedMedication">
+                    <th mat-header-cell *matHeaderCellDef>Prescribed Medication</th>
+                    <td mat-cell *matCellDef="let element">{{ element['prescribedMedication'] }}</td>
+                </ng-container>
+                <ng-container matColumnDef="dateCreated">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by date">Date</th>
+                    <td mat-cell *matCellDef="let element">{{ element['dateCreated'] | date:' dd/MM/yyyy' }}</td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+            </table>
+        </div>
     </div>
 </div>

@@ -52,3 +52,12 @@ mat-dialog-container{
 hr{
     margin-bottom: 1.5rem;
 }
+table {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+th.mat-header-cell {
+    text-align: left;
+    
+}
