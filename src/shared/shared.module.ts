@@ -21,6 +21,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSortModule } from '@angular/material/sort';
 
 import { ToastrModule } from 'ngx-toastr';
 
@@ -33,12 +34,12 @@ import { ToastrModule } from 'ngx-toastr';
     SharedRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    MatButtonModule, MatCardModule, MatDividerModule, MatProgressSpinnerModule, MatInputModule, MatListModule, MatFormFieldModule, MatIconModule, MatRadioModule, MatTableModule, MatSidenavModule, MatToolbarModule, MatTabsModule, MatDialogModule, MatSelectModule, MatMenuModule
+    MatButtonModule, MatCardModule, MatDividerModule, MatProgressSpinnerModule, MatInputModule, MatListModule, MatFormFieldModule, MatIconModule, MatRadioModule, MatTableModule, MatSidenavModule, MatToolbarModule, MatTabsModule, MatDialogModule, MatSelectModule, MatMenuModule, MatSortModule
   ], exports: [
     LoadingComponent,
     ReactiveFormsModule,
     FormsModule,
-    MatButtonModule, MatCardModule, MatDividerModule, MatProgressSpinnerModule, MatInputModule, MatListModule, MatFormFieldModule, MatIconModule, MatRadioModule, MatTableModule, MatSidenavModule, MatToolbarModule, MatTabsModule, MatDialogModule, MatSelectModule,MatMenuModule
+    MatButtonModule, MatCardModule, MatDividerModule, MatProgressSpinnerModule, MatInputModule, MatListModule, MatFormFieldModule, MatIconModule, MatRadioModule, MatTableModule, MatSidenavModule, MatToolbarModule, MatTabsModule, MatDialogModule, MatSelectModule, MatMenuModule, MatSortModule
   ]
 })
 export class SharedModule { }
