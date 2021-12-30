@@ -10,21 +10,21 @@
                             <div class="input-form-group">
                                 <span>Firstname</span>
                                 <div class="">
-                                    <input type="text" placeholder="{{ firstname }}">
+                                    <input type="text"  value="{{ firstname }}">
                                 </div>
                             </div>
 
                             <div class="input-form-group">
                                 <span>Lastname</span>
                                 <div class="">
-                                    <input type="text" placeholder="{{ lastname }}">
+                                    <input type="text" value="{{ lastname }}"> 
                                 </div>
                             </div>
 
                             <div class="input-form-group">
                                 <span>Username</span>
                                 <div class="">
-                                    <input type="text" placeholder="{{ username }}">
+                                    <input type="text" value="{{ username }}">
                                 </div>
                             </div>
 
@@ -55,12 +55,16 @@
                 <ng-template matTabContent>
                     <div style="padding-top: 1.5rem;">
                         <h2 class="text-center">Change your avatar</h2>
-                        <!-- <input class="ng-hide" id="input-file-id" multiple type="file" />
-                        <label for="input-file-id" class="md-button md-raised md-primary">Choose Files</label> -->
-                        <div class="image-form-group">
-                            <form action="">
-                                <input type="file" class="file-upload" onchange="console.log(event.target.files)">
-                                <button mat-raised-button class="btn-form">Upload</button>
+                        <div class="pp-form-group">
+                            <form [formGroup]="newProfileImage" (ngSubmit)="addProfileImage()">
+                                <mat-form-field appearance="outline" style="width: 100%;">
+                                    <mat-label>Image url</mat-label>
+                                    <input matInput type="text" formControlName="userProfilePictureURL">
+                                    <mat-error class="patient-error"
+                                        *ngIf="newProfileImage.get('userProfilePictureURL').hasError('required') && newProfileImage.get('userProfilePictureURL').touched">
+                                        Profile picture url is required</mat-error>
+                                </mat-form-field>
+                                <button mat-raised-button type="submit" [disabled]="newProfileImage.invalid">Update profile picture</button>
                             </form>
                         </div>
                     </div>

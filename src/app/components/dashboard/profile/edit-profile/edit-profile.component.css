@@ -39,20 +39,20 @@
     border-color: #94B3FD;
 }
 
-.image-form-group {
+.pp-form-group {
     font-family: 'Ubuntu', sans-serif;
 }
-.image-form-group h4{
+.pp-form-group h4{
     text-align: center;
 }
-.image-form-group input{
-    padding: 4.5rem 25%;
-    text-align: center;
+.pp-form-group input{
     width: 100%;
-    height: 10rem;
-    border: 3px dashed #94B3FD;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+.pp-form-group button{
+    color: #FFF;
+    background-color: #6788ff;
+    float: right;
 }
 .cp-form{
     width: 100%;
