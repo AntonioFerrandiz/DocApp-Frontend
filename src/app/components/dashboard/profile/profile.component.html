@@ -5,11 +5,11 @@
                 <div class="col-sm-4">
                     <mat-card style="padding: 1.5rem;">
                         <div class="profile-image">
-                            <img mat-card-lg-image src="https://material.angular.io/assets/img/examples/shiba1.jpg"
-                                style="border-radius: 50%;">
+                            <img mat-card-lg-image src="{{ profilePictureURL }}"
+                                style="border-radius: 50%;" alt="Profile Picture of {{ firstname }} {{ lastname }}">
                         </div>
                         <div class="profile-name">
-                            <h2>{{ firstname }} {{ lastname }}</h2>
+                            <h2>{{ firstname }} {{ lastname }} </h2>
                         </div>
                         <mat-card-content>
                             <mat-selection-list [multiple]="false">
