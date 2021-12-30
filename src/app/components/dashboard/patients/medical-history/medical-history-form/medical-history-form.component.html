@@ -1,11 +1,14 @@
 <h2>New medical history for {{ data.firstname }}</h2>
-<form autocomplete="off" [formGroup] = "newMedicalHistory" (ngSubmit) = "addMedicalHistory()">
+<form autocomplete="off" [formGroup]="newMedicalHistory" (ngSubmit)="addMedicalHistory()">
     <div class="row">
         <div class="col">
             <mat-form-field appearance="outline">
                 <mat-label>Weight</mat-label>
                 <input type="number" class="form-input" matInput formControlName="weight">
                 <mat-hint>Weight must be entered in kg</mat-hint>
+                <mat-error class="patient-error"
+                    *ngIf="newMedicalHistory.get('weight').hasError('required') && newMedicalHistory.get('weight').touched">
+                    Weight is required</mat-error>
             </mat-form-field>
         </div>
         <div class="col">
@@ -13,6 +16,9 @@
                 <mat-label>Height</mat-label>
                 <input type="number" class="form-input" matInput formControlName="height">
                 <mat-hint>Height must be entered in cm</mat-hint>
+                <mat-error class="patient-error"
+                    *ngIf="newMedicalHistory.get('height').hasError('required') && newMedicalHistory.get('height').touched">
+                    Height is required</mat-error>
             </mat-form-field>
         </div>
     </div>
@@ -22,6 +28,9 @@
             <mat-form-field appearance="outline">
                 <mat-label>Age</mat-label>
                 <input type="number" class="form-input" matInput formControlName="age">
+                <mat-error class="patient-error"
+                    *ngIf="newMedicalHistory.get('age').hasError('required') && newMedicalHistory.get('age').touched">
+                    Age is required</mat-error>
             </mat-form-field>
         </div>
         <div class="col">
@@ -33,6 +42,9 @@
                     <mat-option value="Months">Months</mat-option>
                     <mat-option value="Years">Years</mat-option>
                 </mat-select>
+                <mat-error class="patient-error"
+                    *ngIf="newMedicalHistory.get('timePeriod').hasError('required') && newMedicalHistory.get('timePeriod').touched">
+                    Time period is required</mat-error>
             </mat-form-field>
         </div>
     </div>
@@ -41,16 +53,24 @@
         <mat-form-field appearance="outline">
             <mat-label>Observations</mat-label>
             <textarea class="form-input" matInput formControlName rows="4" formControlName="observations"></textarea>
+            <mat-error class="patient-error"
+                    *ngIf="newMedicalHistory.get('observations').hasError('required') && newMedicalHistory.get('observations').touched">
+                    Observations is required</mat-error>
         </mat-form-field>
     </div>
     <div class="row">
         <mat-form-field appearance="outline">
             <mat-label>Prescribed medication</mat-label>
-            <input type="text" class="form-input" matInput placeholder="Ex. Paracetamol Q8H" formControlName="prescribedMedication">
+            <input type="text" class="form-input" matInput placeholder="Ex. Paracetamol Q8H"
+                formControlName="prescribedMedication">
+                <mat-error class="patient-error"
+                    *ngIf="newMedicalHistory.get('prescribedMedication').hasError('required') && newMedicalHistory.get('prescribedMedication').touched">
+                    Prescribed medication is required</mat-error>
         </mat-form-field>
     </div>
     <mat-card-actions class="text-center">
         <button mat-raised-button mat-dialog-close class="cancel-btn">Cancel</button>
-        <button mat-raised-button class="add-btn" type="submit">Add</button>
+        <button mat-raised-button class="add-btn" mat-dialog-close type="submit" 
+        [disabled]="newMedicalHistory.invalid" >Add</button>
     </mat-card-actions>
 </form>

@@ -1,11 +1,11 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { MedicalHistory } from 'src/app/models/medicalHistory.model';
 import { MedicalHistoryService } from 'src/app/services/medical-history.service';
-
+import { MedicalHistoryComponent } from 'src/app/components/dashboard/patients/medical-history/medical-history.component'
 @Component({
   selector: 'app-medical-history-form',
   templateUrl: './medical-history-form.component.html',
@@ -19,15 +19,15 @@ export class MedicalHistoryFormComponent implements OnInit {
     private toastr: ToastrService,
     private router: Router) {
     this.newMedicalHistory = this.fb.group({
-      weight: [''],
-      height: [''],
-      age: [''],
-      timePeriod: [''],
+      weight: ['', Validators.required],
+      height: ['', Validators.required],
+      age: ['', Validators.required],
+      timePeriod: ['', Validators.required],
       observations: ['', Validators.required],
-      prescribedMedication: ['']
+      prescribedMedication: ['', Validators.required]
     })
   }
-
+  @ViewChild(MedicalHistoryComponent) child: MedicalHistoryComponent;
   ngOnInit(): void { }
   addMedicalHistory(): void {
     const medicalHistory: MedicalHistory = {
@@ -42,6 +42,7 @@ export class MedicalHistoryFormComponent implements OnInit {
     console.log(medicalHistory)
     this.medicalHistoryService.saveMedicalHistory(medicalHistory).subscribe(data => {
       this.toastr.info(`New medical history added to ${this.data.firstname}`, 'Yay!')
+      this.child.getMedicalHistory()
       console.log(data);
     }, error => {
       console.log(error);
