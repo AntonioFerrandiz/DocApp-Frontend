@@ -18,7 +18,7 @@ export class MedicalHistoryComponent implements OnInit {
   patientID: number;
   patientData: any = [];
   medicalHistoryPatient: any = [];
-  displayedColumns = ['age', 'timePeriod', 'heigth', 'weigth', 'details', 'prescribedMedication', 'dateCreated']
+  displayedColumns = ['age', 'timePeriod', 'heigth', 'weigth', 'details', 'prescribedMedication', 'dateCreated', 'actions']
   dataSource = new MatTableDataSource<MedicalHistory>();
   constructor(private patientService: PatientService,
     private medicalHistoryService: MedicalHistoryService,
@@ -59,6 +59,8 @@ export class MedicalHistoryComponent implements OnInit {
     this.medicalHistoryService.getMedicalHistory(this.patientID).subscribe(data => {
       this.dataSource = data;
       console.log(this.dataSource)
+    }, error =>{
+      console.log('Errorrrrrrr',error)
     })
   }
   announceSortChange(sortState: Sort) {
