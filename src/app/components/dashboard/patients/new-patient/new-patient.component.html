@@ -65,39 +65,6 @@
                             <button mat-raised-button type="submit" [disabled]="newPatient.invalid">Add patient</button>
                         </mat-card-actions>
                     </form>
-                    <!-- <form autocomplete="off" class="text-center" [formGroup]="patient" (ngSubmit)="log()">
-                    <mat-form-field appearance="outline" class="patient-form" >
-                        <mat-label>Username</mat-label>
-                        <input matInput type="text" formControlName="username">
-                        <mat-error class="patient-error"
-                                      *ngIf="patient.get('username').hasError('required') && patient.get('username').touched">
-                                      Username is required</mat-error>
-                    </mat-form-field>
-
-                    <mat-form-field appearance="outline" class="patient-form" >
-                        <mat-label>Identity document</mat-label>
-                        <input matInput type="text" formControlName="identityDocument">
-                        <mat-error class="patient-error"
-                                      *ngIf="patient.get('identityDocument').hasError('required') && patient.get('identityDocument').touched">
-                                      Identity document is required</mat-error>
-                        <mat-error class="patient-error"
-                                      *ngIf="patient.get('identityDocument').hasError('maxlength') && patient.get('identityDocument').touched">
-                                      The identity document must have a maximum of 8 characters</mat-error>
-                        <mat-error class="patient-error"
-                                      *ngIf="patient.get('identityDocument').hasError('pattern') && patient.get('identityDocument').touched">
-                                      Enter only numbers</mat-error>
-                    </mat-form-field>
-
-                    <mat-form-field appearance="outline" class="patient-form">
-                        <mat-label>Password</mat-label>
-                        <input matInput type="password" formControlName="password">
-                        <mat-error class="patient-error"
-                                      *ngIf="patient.get('password').hasError('required') && patient.get('password').touched">
-                                      Password is required</mat-error>
-                    </mat-form-field>
-                    <button mat-raised-button type="submit" [disabled]="patient.invalid">patient</button>
-                    
-                </form> -->
                 </mat-card-content>
             </mat-card>
         </div>

@@ -2,6 +2,7 @@
     <div class="container" style="padding: 2rem;">
         <p class="actual-page">Home / Patients / Medical History / {{ patientData.firstname }} {{ patientData.lastname
             }}</p>
+        <app-loading *ngIf="loadingPatient"></app-loading>
         <div class="patient-info-container">
             <mat-card class="patient-card">
                 <mat-card-title class="mb-3">
@@ -34,7 +35,8 @@
             <button mat-raised-button (click)="openDialog()">New Medical History</button>
         </div>
         <hr>
-        <div class="medical-history-list container">
+        <app-loading *ngIf="loading"></app-loading>
+        <div class="medical-history-list container" *ngIf="!loading && medicalHistoryPatient.length > 0">
             <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)" class="mat-elevation-z8">
                 <ng-container matColumnDef="age">
                     <th mat-header-cell *matHeaderCellDef>Age</th>

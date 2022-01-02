@@ -15,6 +15,8 @@ import {MatSort, Sort} from '@angular/material/sort'
   styleUrls: ['./medical-history.component.css']
 })
 export class MedicalHistoryComponent implements OnInit {
+  loading = false;
+  loadingPatient = false
   patientID: number;
   patientData: any = [];
   medicalHistoryPatient: any = [];
@@ -49,25 +51,26 @@ export class MedicalHistoryComponent implements OnInit {
 
   //Agregar comprobante de paciente.
   getPatient(): void {
+    this.loadingPatient = true
     this.patientService.GetPatient(this.patientID).subscribe(data => {
+      this.loadingPatient = false
       this.patientData = data;
       console.log(this.patientData);
     })
   }
 
   getMedicalHistory(): void {
+    this.loading = true;
     this.medicalHistoryService.getMedicalHistory(this.patientID).subscribe(data => {
+      this.loading = false
       this.dataSource = data;
+      this.medicalHistoryPatient = data;
       console.log(this.dataSource)
     }, error =>{
-      console.log('Errorrrrrrr',error)
+    
     })
   }
   announceSortChange(sortState: Sort) {
-    // This example uses English messages. If your application supports
-    // multiple language, you would internationalize these strings.
-    // Furthermore, you can customize the message to add additional
-    // details about the values being sorted.
     if (sortState.direction) {
       this._liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
     } else {
