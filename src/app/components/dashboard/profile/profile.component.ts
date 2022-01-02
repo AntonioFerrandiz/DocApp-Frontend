@@ -9,7 +9,7 @@ import { UserProfilePictureService } from 'src/app/services/user-profile-picture
 })
 export class ProfileComponent implements OnInit {
   showEditProfile = false;
-  showOverview = false;
+  showOverview = true;
   firstname: string;
   lastname: string;
   profilePictureURL: string;
