@@ -1,6 +1,7 @@
 import { MediaMatcher } from '@angular/cdk/layout';
 import { ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { LoginService } from 'src/app/services/login.service';
 import { UserProfilePictureService } from 'src/app/services/user-profile-picture.service';
 
@@ -16,7 +17,7 @@ export class DashboardComponent implements OnInit {
   profilePictureURL: string;
   private _mobileQueryListener: () => void;
   constructor(changeDetectorRef: ChangeDetectorRef,
-    media: MediaMatcher,
+    media: MediaMatcher, public dialog: MatDialog,
     private loginService: LoginService, private userProfilePictureService: UserProfilePictureService) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
@@ -30,6 +31,9 @@ export class DashboardComponent implements OnInit {
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
+  closeDialog() {
+    const dialogRef = this.dialog.closeAll();
+  }
 
   getUserInfo(): void {
     this.loginService.getUserData().subscribe(data => {
@@ -37,7 +41,7 @@ export class DashboardComponent implements OnInit {
       this.lastname = data["lastname"]
     })
   }
-  getUserProfilePicture(): void{
+  getUserProfilePicture(): void {
     this.userProfilePictureService.getProfileImageURL().subscribe(data => {
       this.profilePictureURL = data[data.length - 1]['profilePictureURL']
       console.log(this.profilePictureURL)

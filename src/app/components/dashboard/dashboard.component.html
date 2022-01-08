@@ -1,15 +1,15 @@
 <div class="side-nav-container" [class.is-mobile]="mobileQuery.matches">
-    <mat-toolbar class="toolbar">
+    <mat-toolbar class="toolbar" (click)="closeDialog()">
         <button mat-icon-button (click)="snav.toggle()">
             <mat-icon>menu</mat-icon>
         </button>
         <h1 class="app-name">Doc App</h1>
     </mat-toolbar>
 
-    <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0" >
         <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
             fixedTopGap="56">
-            <mat-nav-list>
+            <mat-nav-list (click)="closeDialog()">
                 <div class="profileCard">
                     <mat-card>
                         <mat-card-header>
