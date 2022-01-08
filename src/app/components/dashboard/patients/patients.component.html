@@ -48,11 +48,11 @@
                                 <button mat-raised-button [matMenuTriggerFor]="menu"
                                     class="settings-button">Settings</button>
                                 <mat-menu #menu="matMenu">
-                                    <button mat-menu-item>
+                                    <button mat-menu-item [disabled]="!edit">
                                         <mat-icon>edit</mat-icon>
                                         <span>Edit</span>
                                     </button>
-                                    <button mat-menu-item>
+                                    <button mat-menu-item (click)="deletePatient(patient.id)">
                                         <mat-icon>delete</mat-icon>
                                         <span>Delete</span>
                                     </button>

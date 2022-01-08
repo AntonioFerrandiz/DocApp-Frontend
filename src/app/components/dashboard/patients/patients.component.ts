@@ -11,6 +11,7 @@ import { PatientService } from 'src/app/services/patient.service';
   styleUrls: ['./patients.component.css']
 })
 export class PatientsComponent implements OnInit {
+  edit = false;
   loading = false;
   showListPatients = false;
   showNewPatient = false;
@@ -29,5 +30,16 @@ export class PatientsComponent implements OnInit {
     }, error => {
       this.toastr.error(error, 'Ups...');
     })
+  }
+  deletePatient(patientID: number):void{
+    if(confirm('Are you sure to remove this patient from your list?')){
+      this.patientService.DeletePatient(patientID).subscribe(data => {
+        this.toastr.success('Patient successfully removed from the list', 'Ok')
+        this.getPatients();
+      }, error => {
+        this.toastr.error('There was an error trying to remove the patient from the list, try again.', 'Ups...')
+        console.log(error)
+      })
+    }
   }
 }
