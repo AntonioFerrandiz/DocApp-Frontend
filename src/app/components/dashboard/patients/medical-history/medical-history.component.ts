@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, HostListener, ElementRef } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { PatientService } from 'src/app/services/patient.service';
@@ -17,6 +17,15 @@ import {MatSort, Sort} from '@angular/material/sort'
 export class MedicalHistoryComponent implements OnInit {
   loading = false;
   loadingPatient = false
+  isOpen = true;
+  // @HostListener('document:click', ['$event'])
+  // clickOut(event){
+  //   if(this.eRef.nativeElement.contains(event.target)) {
+  //     console.log(event)
+  //   } else {
+  //     console.log(event)
+  //   }
+  // }
   patientID: number;
   patientData: any = [];
   medicalHistoryPatient: any = [];
@@ -25,7 +34,8 @@ export class MedicalHistoryComponent implements OnInit {
   constructor(private patientService: PatientService,
     private medicalHistoryService: MedicalHistoryService,
     private aRoute: ActivatedRoute, public dialog: MatDialog,
-    private _liveAnnouncer: LiveAnnouncer) {
+    private _liveAnnouncer: LiveAnnouncer,
+    private eRef: ElementRef) {
     this.patientID = +this.aRoute.snapshot.paramMap.get("id");
   }
   @ViewChild(MatSort) sort: MatSort;
@@ -41,7 +51,7 @@ export class MedicalHistoryComponent implements OnInit {
         firstname: this.patientData.firstname,
         patientID: this.patientData.id,
       },
-      disableClose: false
+      disableClose: false,
     });
 
     dialogRef.afterClosed().subscribe(result => {
