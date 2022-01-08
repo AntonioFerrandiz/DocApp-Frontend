@@ -48,6 +48,7 @@ export class LandingComponent implements OnInit {
       this.totalPatients = data;
     })
   }
+
   getListOfGenders(): void {
     this.patientService.GetListOfGenders().subscribe(data => {
       this.gendersList = data;
