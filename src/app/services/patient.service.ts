@@ -29,4 +29,7 @@ export class PatientService {
    GetPatient(patientID: number): Observable<any>{
     return this.http.get(this.myAppUrl + this.myApiUrl + `/${patientID}`);
    }
+   DeletePatient(patientID: number): Observable<any>{
+     return this.http.delete(this.myAppUrl + this.myApiUrl + `/${patientID}`)
+   }
 }
