@@ -30,12 +30,11 @@ export class LandingComponent implements OnInit {
   ngOnInit(): void {
     this.getUserInfo()
     this.getTotalPatients();
-    this.getListOfGenders();
     this.getTotalPatientsMale()
-
+    this.getTotalPatientsFemale();
   }
 
-  @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
+  
 
 
   getUserInfo(): void {
@@ -49,35 +48,18 @@ export class LandingComponent implements OnInit {
     })
   }
 
-  getListOfGenders(): void {
-    this.patientService.GetListOfGenders().subscribe(data => {
-      this.gendersList = data;
-      this.patientsFemale = parseInt(this.gendersList[0])
-
+  getTotalPatientsMale():void{
+    this.patientService.GetNumberOfMalePatients().subscribe(data =>{
+      this.patientsMale = data;
+      console.log(this.patientsMale)
     })
   }
-  // async getTotalPatientsMale(): Promise<number> {
-  //   const body = await window.fetch(this.myAppUrl + this.myApiUrl + '/GetListOfGenders')
-  //   const data = await body.json();
-  //   console.log(parseInt(data[1]))
-  //   this.patientsMale = parseInt(data[1]);
-  //   return parseInt(data[1])
-  // }
-
-  getTotalPatientsMale(): number{
-    var value:number;
-    this.patientService.GetListOfGenders().subscribe( async data =>{
-      await this.getCoca(data);
+  getTotalPatientsFemale(){
+    this.patientService.GetNumberOfFemalePatients().subscribe(data =>{
     })
-    return value;
   }
-  getCoca(num): number{
-    this.patientsMale = num
-    console.log('x',this.patientsMale);
-    return this.patientsMale
-  }
-
   // Pie
+  @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
   public pieChartOptions: ChartConfiguration['options'] = {
     responsive: true,
     plugins: {
